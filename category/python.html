@@ -67,7 +67,8 @@ https://github.com/wamonite/relapse
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-
+ 
+                <li ><a href="https://bactregulators.org/">Welcome to My Site</a></li>
 
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -85,12 +86,19 @@ https://github.com/wamonite/relapse
 
 
       <article>
-      <h1><a href="https://bactregulators.org/post-one.html" rel="bookmark">My first post</a></h1>
+      <h1><a href="https://bactregulators.org/posts/Python/autovivify.html" rel="bookmark">How to make a nested dictionary in Python 3</a></h1>
       
-      <p>This is my second attempt to install pelican and set up a blog site following <a href="https://www.thedigitalcatonline.com/blog/2019/06/07/run-a-pelican-blog/">these instructions</a>.</p>
+      <p>This function creates a nested dictionary with an assigned value type for the deepest level subkeys.
+Thoug I use this function for many years, I am not an author of it.  </p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="n">defaultdict</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">autovivify</span><span class="p">(</span><span class="n">levels</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">final</span><span class="o">=</span><span class="nb">dict</span><span class="p">):</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">defaultdict</span><span class="p">(</span><span class="n">final</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">else</span>
+<span class="w">            </span><span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span><span class="w"> </span><span class="n">autovivify</span><span class="p">(</span><span class="n">levels</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">final</span><span class="p">)))</span>
+</code></pre></div>
       
       <p class="info">
-Posted Fri 02 May 2025, last updated Fri 02 May 2025 by <a class="url fn" href="https://bactregulators.org/author/aekazakov.html">aekazakov</a>  in <a href="https://bactregulators.org/category/python.html">Python</a> (<a href="https://bactregulators.org/tag/test.html">test</a>, <a href="https://bactregulators.org/tag/python.html">Python</a>)      </p>
+Posted Mon 05 May 2025, last updated Mon 05 May 2025 by <a class="url fn" href="https://bactregulators.org/author/aekazakov.html">aekazakov</a>  in <a href="https://bactregulators.org/category/python.html">Python</a> (<a href="https://bactregulators.org/tag/recipes.html">recipes</a>, <a href="https://bactregulators.org/tag/python.html">Python</a>)      </p>
       
       </article>
       
@@ -114,17 +122,16 @@ Posted Fri 02 May 2025, last updated Fri 02 May 2025 by <a class="url fn" href="
                 <h1>Links</h1>
                 <!-- Links -->
                 <ul class="nav nav-pills nav-stacked">
+                  <li><a href="https://aekazakov.github.io/genome-depot/">GenomeDepot documentation</a></li>
                   <li><a href="https://getpelican.com/">Pelican</a></li>
                   <li><a href="https://www.python.org/">Python.org</a></li>
                   <li><a href="https://palletsprojects.com/p/jinja/">Jinja2</a></li>
-                  <li><a href="#">You can modify those links in your config file</a></li>
                 </ul>
 
                 <!-- Social -->
                 <h1>Social</h1>
                 <ul class="nav nav-pills nav-stacked">
-                  <li><a href="#">You can add links in your config file</a></li>
-                  <li><a href="#">Another social link</a></li>
+                  <li><a href="https://genomic.social/@aek">Mastodon</a></li>
                 </ul>
               </nav>
 
